@@ -1,4 +1,4 @@
-# SSIN
+# Explainable Machine Learning for Characterizing\\Unknown Molecular Structures in Infrared Spectra
 
 ## Abstract
 
