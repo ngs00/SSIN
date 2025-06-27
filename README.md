@@ -17,4 +17,4 @@ Various machine learning methods for detecting functional groups in infrared (IR
 
 ## Dataset
 
-The IR spectrum dataset is available at https://webbook.nist.gov/chemistry
+The IR spectrum dataset is available at https://webbook.nist.gov/chemistry. The metadata of the dataset was uploaded to https://github.com/ngs00/ssin.
