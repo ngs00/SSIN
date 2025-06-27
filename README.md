@@ -12,3 +12,9 @@ Various machine learning methods for detecting functional groups in infrared (IR
 
 - ``train_ssin.py``: Train and evaluate SSIN based on k-fold cross validation.
 - ``exec_ssin.py``: Execute the trained SSIN model to calculate detection labels and important absorption peaks. Then, make an IR spectrum analysis report through SSIN-LLM.
+
+---
+
+## Dataset
+
+The IR spectrum dataset is available at https://webbook.nist.gov/chemistry
