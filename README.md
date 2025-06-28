@@ -27,5 +27,5 @@ Various machine learning methods for detecting functional groups in infrared (IR
 ## Downloading Phi-4 for Generating Analysis Reports
 Before executing ``exec_ssin.py``, you should install Phi-4 to generate a human-readable IR spectrum analysis report from the prediction results of SSIN. The installation process of Phi-4 is as follows.
 
-1. Visit https://github.com/ollama/ollama to install Ollama software.
-2. Download Phi-4 in https://ollama.com/library/phi4 through Ollama software.
+1. Visit https://github.com/ollama/ollama to install the Ollama software.
+2. Download Phi-4 in https://ollama.com/library/phi4 through the Ollama software.
