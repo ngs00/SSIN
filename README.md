@@ -21,3 +21,11 @@ Various machine learning methods for detecting functional groups in infrared (IR
 
 - The IR spectrum dataset is available at https://webbook.nist.gov/chemistry.
 - The metadata of the NIST dataset was uploaded to https://github.com/ngs00/ssin.
+
+---
+
+## Downloading Phi-4 for Generating Analysis Reports
+Before executing ``exec_ssin.py``, you should install Phi-4 to generate a human-readable IR spectrum analysis report from the prediction results of SSIN. The installation process of Phi-4 is as follows.
+
+1. Visit https://github.com/ollama/ollama to install Ollama.
+2. 
