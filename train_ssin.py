@@ -19,11 +19,12 @@ for target_fg in func_groups.keys():
     print('------------------------ {} ------------------------'.format(target_fg))
 
     # Load the IR spectrum dataset.
-    dataset = load_dataset(path_metadata='../../data/chem_data/ir/nist/metadata.xlsx',
-                           path_jdx='../../data/chem_data/ir/nist/jdx',
-                           idx_smiles=4,
-                           target_substruct=func_groups[target_fg])
-    torch.save(dataset, 'save/dataset/dataset_{}.pt'.format(target_fg))
+    # Activate if you need to load a new IR spectrum dataset.
+    # dataset = load_dataset(path_metadata='../../data/chem_data/ir/nist/metadata.xlsx',
+    #                        path_jdx='../../data/chem_data/ir/nist/jdx',
+    #                        idx_smiles=4,
+    #                        target_substruct=func_groups[target_fg])
+    # torch.save(dataset, 'save/dataset/dataset_{}.pt'.format(target_fg))
     dataset = torch.load('save/dataset/dataset_{}.pt'.format(target_fg))
 
 
