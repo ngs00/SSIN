@@ -51,8 +51,8 @@ class SSIN(torch.nn.Module):
 
         return out, attns, z
 
-    def fit(self, data_loader, optimizer, loss_func):
-        hinge_const = torch.tensor(0, requires_grad=False)
+    def fit(self, data_loader, optimizer, loss_func, alpha=0.4):
+        _alpha = torch.tensor(alpha, dtype=torch.float, requires_grad=False)
         sum_losses = 0
 
         self.train()
@@ -69,7 +69,7 @@ class SSIN(torch.nn.Module):
             _z_ref = z_ref.unsqueeze(0).repeat(z.shape[0], 1, 1)
             ref_dists = torch.norm(_z - _z_ref, dim=2)
             loss += torch.mean(y * ref_dists)
-            loss += torch.mean((1 - y) * torch.maximum(hinge_const, 2 - ref_dists))
+            loss += torch.mean((1 - y) * torch.maximum(_alpha, 2 - ref_dists))
 
             optimizer.zero_grad()
             loss.backward()
@@ -129,3 +129,4 @@ def cluster_wn(wn):
         peaks[i] = [numpy.min(peaks[i]), numpy.max(peaks[i])]
 
     return peaks
+
